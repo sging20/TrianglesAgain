@@ -18,8 +18,8 @@ public class Point {
     public double distanceTo(Point other){
       double x2= other.x;
       double y2= other.y;
-      double distance = Math.sqrt( ((x2-x)*(x2-x)) + ((y2-y)*(y2-y)) );
-      return(distance);
+      double distance = ( ((x2-x)*(x2-x)) + ((y2-y)*(y2-y)) );
+      return(Math.sqrt(distance));
     }
 
     public boolean equals(Point other) {
