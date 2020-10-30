@@ -13,13 +13,16 @@ public class Triangle {
       }
       public double getPerimeter() {
         // Not rounding
-        return v1.distanceTo(v2) + v3.distanceTo(v1) + v2.distanceTo(v3);
-      }
-      public double getArea() {
         double sidea = v1.distanceTo(v2);
         double sideb = v1.distanceTo(v3);
         double sidec = v2.distanceTo(v3);
-        double s = getPerimeter() / 2.0;
+        return sidea + sideb + sidec;
+      }
+      public double getArea() {
+        double sidea = v1.distanceTo(v2);
+        double sideb = v2.distanceTo(v3);
+        double sidec = v3.distanceTo(v1);
+        double s = (sidea + sideb + sidec) / 2.0;
         double area= Math.sqrt(s * (s- sidea) * (s- sideb) * (s- sidec));
         return(area);
       }
